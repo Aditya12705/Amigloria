@@ -1,0 +1,327 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Event Registration - AMIGLORIA 2025</title>
+    <link href="https://fonts.googleapis.com/css2?family=Exo+2:wght@400;500;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700&family=Neon+Tube:wght@400&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="./styles.css">
+    <style>
+        /* Additional styles for register.html */
+        body {
+            background-color: #111;
+            color: #eee;
+        }
+
+        .cockpit-nav {
+            margin-bottom: 2px;
+        }
+
+        /* Adjust spacing to prevent overlap */
+        .event-details {
+            padding-top: 1000px; /* Increase top padding */
+            padding: 40px 20px;
+        }
+
+        .holo-card {
+            background: rgba(30, 30, 30, 0.8);
+            padding: 30px;
+            border-radius: 15px;
+            box-shadow: 0 0 30px rgba(0, 123, 255, 0.5);
+        }
+
+        #event-registration-form label {
+            display: block;
+            margin-bottom: 10px;
+            font-weight: bold;
+            color: #ddd;
+        }
+
+        #event-registration-form select,
+        #event-registration-form input {
+            padding: 12px;
+            margin-bottom: 20px;
+            border-radius: 8px;
+            border: 2px solid #007bff;
+            background-color: #222;
+            color: #eee;
+            width: 100%;
+            box-sizing: border-box;
+            transition: border-color 0.3s ease;
+        }
+
+        #event-registration-form select:focus,
+        #event-registration-form input:focus {
+            border-color: #00bfff;
+            outline: none;
+            box-shadow: 0 0 10px rgba(0, 191, 255, 0.7);
+        }
+
+        .participant {
+            margin-bottom: 25px;
+            padding: 20px;
+            border: 2px solid #007bff;
+            border-radius: 10px;
+            background-color: rgba(40, 40, 40, 0.7);
+        }
+
+        .participant h3 {
+            color: #fff;
+            margin-bottom: 15px;
+            text-align: center;
+        }
+
+        #add-participant {
+            background-color: #007bff;
+            color: white;
+            padding: 12px 25px;
+            border: none;
+            border-radius: 8px;
+            cursor: pointer;
+            font-size: 1.1rem;
+            transition: background-color 0.3s ease;
+        }
+
+        #add-participant:hover {
+            background-color: #00bfff;
+            box-shadow: 0 0 15px rgba(0, 191, 255, 0.7);
+        }
+
+        #registration-fee {
+            font-size: 1.3rem;
+            font-weight: bold;
+            color: #00bfff;
+        }
+
+        #pay-now {
+            background-color: #28a745;
+            color: white;
+            padding: 15px 30px;
+            border: none;
+            border-radius: 8px;
+            cursor: pointer;
+            font-size: 1.2rem;
+            transition: background-color 0.3s ease;
+        }
+
+        #pay-now:hover {
+            background-color: #34ce57;
+            box-shadow: 0 0 15px rgba(52, 206, 87, 0.7);
+        }
+
+        #launch-button {
+            font-size: 1.2rem; /* Reduce button size */
+            padding: 2px 4px; /* Adjust padding */
+        }
+
+        .slideshow-container {
+            position: relative;
+            max-width: 100%;
+            margin: auto;
+        }
+
+        .slide {
+            display: none;
+        }
+
+        .fade {
+            animation-name: fade;
+            animation-duration: 1.5s;
+        }
+
+        @keyframes fade {
+            from { opacity: .4; }
+            to { opacity: 1; }
+        }
+    </style>
+    <script defer src="./script.js"></script>
+</head>
+<body>
+    <!-- Background Image -->
+    <div id="bg-video"></div>
+
+    <!-- Navigation Bar -->
+    <header>
+        <nav class="cockpit-nav">
+            <img src="amity-removebg-preview(1).png" alt="Amity University Bengaluru Logo" id="amity-logo">
+            <button id="launch-button" aria-label="Launch AMIGLORIA 2025 Experience">AMIGLORIA 2025</button>
+            <div class="nav-hud">
+                <button class="nav-button" onclick="window.location.href='index.html#home'">Home</button>
+                <button class="nav-button" onclick="window.location.href='index.html#about'">About</button>
+                <button class="nav-button" onclick="window.location.href='index.html#events'">Events</button>
+                <button class="nav-button" onclick="window.location.href='index.html#contact-us'">Contact Us</button>
+                <button class="nav-button" onclick="window.location.href='register.html'">Register</button>
+            </div>
+            <img src="3 (1).png" alt="New Logo" id="additional-logo">
+        </nav>
+    </header>
+
+    <!-- Add slideshow -->
+    <div class="slideshow-container">
+        <div class="slide fade">
+            <img src="./images/slide1.jpg" alt="" style="width:100%">
+        </div>
+        <div class="slide fade">
+            <img src="./images/slide2.jpg" alt="" style="width:100%">
+        </div>
+        <div class="slide fade">
+            <img src="./images/slide3.jpg" alt="" style="width:100%">
+        </div>
+        <div class="slide fade">
+            <img src="./images/bg3.jpg" alt="" style="width:100%">
+        </div>
+    </div>
+
+    <script>
+        let slideIndex = 0;
+        showSlides();
+
+        function showSlides() {
+            const slides = document.getElementsByClassName("slide");
+            for (let i = 0; i < slides.length; i++) {
+                slides[i].style.display = "none";
+            }
+            slideIndex++;
+            if (slideIndex > slides.length) { slideIndex = 1; }
+            slides[slideIndex - 1].style.display = "block";
+            setTimeout(showSlides, 3000); // Change slide every 3 seconds
+        }
+    </script>
+
+    <main class="event-details">
+        <h1>Register for Events</h1>
+        <div class="holo-card centered-panel">
+            <form id="event-registration-form">
+                <!-- Event Category Selection -->
+                <label for="event-category">Choose Event Category:</label>
+                <select id="event-category" name="event-category" required>
+                    <option value="">Select Event</option>
+                    <option value="echo-verse">Echo Verse: The Ultimate Singing Showdown</option>
+                    <option value="rhythmic-rumble">Rhythmic Rumble: Video Choreography</option>
+                    <option value="taal-tarang">Taal Tarang: The Classical Dance Confrontation</option>
+                    <option value="folk-feat-fiesta">Folk Feat Fiesta: Step Into Heritage</option>
+                    <option value="clash-of-chords">Clash of Chords: The Band Face-Off</option>
+                    <option value="aether-vortex">Aether Vortex: The Runway Revolution</option>
+                    <option value="canvas-of-expressions">Canvas of Expressions – The Face Painting Challenge</option>
+                    <option value="spontanea">Spontanea: Speak Your Mind</option>
+                    <option value="clash-of-minds">Clash of Minds – The Ultimate Debate Battle</option>
+                    <option value="brainwave-arena">Brainwave Arena: The Knowledge Knockout</option>
+                    <option value="inno-thon">Inno Thon: Pitch to Win</option>
+                    <option value="bid-blasters">Bid Blasters: The IPL Auction Showdown</option>
+                    <option value="frame-quest">Frame Quest: Capture the Moment</option>
+                    <option value="cine-sprint">Cine Sprint – The Short Movie Showdown</option>
+                </select>
+
+                <!-- Group Name (For Group Events Only) -->
+                <div id="group-name-container" style="display: none;">
+                    <label for="group-name">Group Name:</label>
+                    <input type="text" id="group-name" name="group-name" placeholder="Enter Group Name">
+                </div>
+
+                <!-- Participant Information -->
+                <div id="participants-container">
+                    <h3>Participant 1</h3>
+                    <div class="participant">
+                        <input type="text" name="participant-name[]" placeholder="Name" required aria-label="Participant Name">
+                        <input type="text" name="college-name[]" placeholder="College Name" required aria-label="College Name">
+                        <input type="email" name="email[]" placeholder="Email" required aria-label="Email">
+                        <input type="tel" name="contact-no[]" placeholder="Contact No" required aria-label="Contact No">
+                    </div>
+                </div>
+                <button type="button" id="add-participant" style="display: none;">Add Participant +</button>
+
+                <!-- Registration Fee -->
+                <p><strong>Registration Fee:</strong> Rs. <span id="registration-fee">0</span></p>
+
+                <!-- Payment Button -->
+                <button type="submit" id="pay-now">Pay Now</button>
+            </form>
+        </div>
+    </main>
+
+    <footer>
+        <div class="footer-left">Designed by: <img src="logo.png" alt="AB"></div>
+        <div class="footer-right">Powered by: Amity University Bengaluru</div>
+    </footer>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            const eventCategory = document.getElementById('event-category');
+            const registrationFee = document.getElementById('registration-fee');
+            const groupNameContainer = document.getElementById('group-name-container');
+            const addParticipantButton = document.getElementById('add-participant');
+            const participantsContainer = document.getElementById('participants-container');
+
+            // Event details mapping
+            const eventDetails = {
+                "echo-verse": { price: 500, isGroup: true, maxParticipants: 5 },
+                "rhythmic-rumble": { price: 1000, isGroup: true, maxParticipants: 10 },
+                "taal-tarang": { price: 500, isGroup: false, maxParticipants: 1 },
+                "folk-feat-fiesta": { price: 1000, isGroup: true, maxParticipants: 10 },
+                "clash-of-chords": { price: 2000, isGroup: true, maxParticipants: 10 },
+                "aether-vortex": { price: 2000, isGroup: true, maxParticipants: 12 },
+                "canvas-of-expressions": { price: 500, isGroup: true, maxParticipants: 2 },
+                "spontanea": { price: 300, isGroup: false, maxParticipants: 1 },
+                "clash-of-minds": { price: 500, isGroup: true, maxParticipants: 2 },
+                "brainwave-arena": { price: 500, isGroup: false, maxParticipants: 1 },
+                "inno-thon": { price: 500, isGroup: true, maxParticipants: 4 },
+                "bid-blasters": { price: 1000, isGroup: true, maxParticipants: 4 },
+                "frame-quest": { price: 300, isGroup: false, maxParticipants: 1 },
+                "cine-sprint": { price: 1000, isGroup: true, maxParticipants: 6 }
+            };
+
+            let currentEvent = null;
+
+            // Update price, group name visibility, and participant limit on event selection
+            eventCategory.addEventListener('change', () => {
+                const selectedEvent = eventDetails[eventCategory.value];
+                if (selectedEvent) {
+                    currentEvent = selectedEvent;
+                    registrationFee.textContent = selectedEvent.price;
+                    groupNameContainer.style.display = selectedEvent.isGroup ? 'block' : 'none';
+                    addParticipantButton.style.display = selectedEvent.isGroup ? 'block' : 'none';
+
+                    // Reset participants
+                    participantsContainer.innerHTML = `
+                        <h3>Participant 1</h3>
+                        <div class="participant">
+                            <input type="text" name="participant-name[]" placeholder="Name" required aria-label="Participant Name">
+                            <input type="text" name="college-name[]" placeholder="College Name" required aria-label="College Name">
+                            <input type="email" name="email[]" placeholder="Email" required aria-label="Email">
+                            <input type="tel" name="contact-no[]" placeholder="Contact No" required aria-label="Contact No">
+                        </div>
+                    `;
+                } else {
+                    currentEvent = null;
+                    registrationFee.textContent = '0';
+                    groupNameContainer.style.display = 'none';
+                    addParticipantButton.style.display = 'none';
+                    participantsContainer.innerHTML = '';
+                }
+            });
+
+            // Add participant functionality
+            addParticipantButton.addEventListener('click', () => {
+                if (!currentEvent) return;
+
+                const currentParticipants = participantsContainer.querySelectorAll('.participant').length;
+                if (currentParticipants < currentEvent.maxParticipants) {
+                    const participantDiv = document.createElement('div');
+                    participantDiv.classList.add('participant');
+                    participantDiv.innerHTML = `
+                        <h3>Participant ${currentParticipants + 1}</h3>
+                        <input type="text" name="participant-name[]" placeholder="Name" required aria-label="Participant Name">
+                        <input type="text" name="college-name[]" placeholder="College Name" required aria-label="College Name">
+                        <input type="email" name="email[]" placeholder="Email" required aria-label="Email">
+                        <input type="tel" name="contact-no[]" placeholder="Contact No" required aria-label="Contact No">
+                    `;
+                    participantsContainer.appendChild(participantDiv);
+                } else {
+                    alert(`Maximum ${currentEvent.maxParticipants} participants allowed for this event.`);
+                }
+            });
+        });
+    </script>
+</body>
+</html>

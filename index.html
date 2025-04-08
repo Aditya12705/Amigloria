@@ -1,0 +1,221 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AMIGLORIA 2025</title>
+    <link href="https://fonts.googleapis.com/css2?family=Exo+2:wght@400;500;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700&family=Neon+Tube:wght@400&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <!-- Background Image -->
+    <div id="bg-video"></div>
+
+    <!-- Loading Screen -->
+    <div id="loading" class="loading">
+        <div class="loading-bar"></div>
+        <p>Preparing for the Event...</p>
+    </div>
+
+    <!-- Header -->
+    <header>
+        <nav class="cockpit-nav">
+            <img src="amity-removebg-preview(1).png" alt="Amity University Bengaluru Logo" id="amity-logo">
+            <button id="launch-button" aria-label="Launch AMIGLORIA 2025 Experience">AMIGLORIA 2025</button>
+            <div class="nav-hud">
+                <button class="nav-button" data-section="#home">Home</button>
+                <button class="nav-button" data-section="#about">About</button>
+                <button class="nav-button" data-section="#events">Events</button>
+                <button class="nav-button" data-section="#contact-us">Contact Us</button>
+                <button class="nav-button" onclick="window.location.href='./register.html'">Register</button>
+            </div>
+            <img src="3 (1).png" alt="New Logo" id="additional-logo">
+        </nav>
+    </header>
+
+    <!-- AMIGLORIA Logo -->
+    <img src="3 (1).png" alt="AMIGLORIA Logo" id="amigloria-logo">
+
+    <main>
+        <section id="home" class="hero">
+            <h1>AMIGLORIA 2025</h1>
+            <p>Welcome to Amity University Bengaluru</p>
+            <button id="hack-button" aria-label="Explore Events">Explore Events</button>
+            <div class="countdown">
+                <div><span id="days">00</span> Days</div>
+                <div><span id="hours">00</span> Hours</div>
+                <div><span id="minutes">00</span> Minutes</div>
+                <div><span id="seconds">00</span> Seconds</div>
+            </div>
+            <p class="event-dates">Event Dates: 9-10 May 2025</p>
+        </section>
+
+        <section id="about" class="animate-on-scroll">
+            <h2 class="glitch" data-text="About Section">About Section</h2>
+            <div class="about-container">
+                <div class="holo-card">
+                    <h3>About Amity University Bengaluru</h3>
+                    <p>Amity University Bengaluru embodies the core values that have defined Amity institutions as world-class centers of education for over two decades. Committed to excellence in academics, research, and training, the university upholds global standards through state-of-the-art infrastructure and innovative teaching methodologies designed to nurture future leaders. With an industry-integrated curriculum, Amity seamlessly blends modern advancements with traditional values, equipping students with the knowledge and skills required to excel in the corporate world.</p>
+                    <p>Spread across a 70-acre campus, Amity University Bengaluru offers a dynamic and enriching environment, surrounded by serene landscapes that foster both intellectual and personal growth. The campus buzzes with vibrant student life, where individuals engage in diverse activities that challenge them to think critically, embrace new technologies, develop leadership and management skills, and explore creative ideas. This holistic approach ensures that graduates emerge not only as accomplished professionals but also as responsible and compassionate individuals ready to make meaningful contributions to society.</p>
+                </div>
+                <div class="holo-card">
+                    <h3>About AMIGLORIA 2025</h3>
+                    <p>Get ready for AMIGLORIA 2025, the ultimate celebration of culture, creativity, and competition at Amity University Bengaluru! This two-day festival promises an electrifying experience, bringing together the vibrant energy of students from Amity and across Bengaluru. With an exciting lineup of events spanning performing arts, fashion, literary excellence, entrepreneurship, and cinematic expression, AMIGLORIA 2025 is set to be an unforgettable extravaganza.</p>
+                    <p>From soul-stirring musical performances and high-energy dance face-offs to intense band battles, the stage will come alive with raw talent and artistic brilliance. The festival will also showcase the best of fashion and creative arts, where students can redefine trends and express themselves through dynamic visual storytelling. For those with a passion for words and intellect, literary and oratory events will provide a platform to engage in thought-provoking discussions and spirited debates. Additionally, budding entrepreneurs will have the chance to pitch their groundbreaking ideas, fostering a culture of innovation and leadership.</p>
+                    <p>Beyond the competitions, AMIGLORIA 2025 will be a spectacle of entertainment, featuring renowned rock bands, singers, and musical artists who will set the campus buzzing with electrifying performances. With a perfect blend of talent, creativity, and celebration, this festival promises to be one of the most exciting and memorable experiences on campus, uniting students in an atmosphere of artistic expression and camaraderie.</p>
+                </div>
+            </div>
+        </section>
+
+        <section id="events" class="animate-on-scroll">
+            <h2 class="glitch" data-text="Event">Event</h2>
+            <div class="event-grid">
+                <div class="event-card" data-category="performing-arts">
+                    <h3>Performing Arts 🎭</h3>
+                    <ul>
+                        <li><a href="./events/echo-verse.html">Echo Verse: The Ultimate Singing Showdown 🎤</a></li>
+                        <li><a href="./events/rhythmic-rumble.html">Rhythmic Rumble – The Dance Face-Off 💃</a></li>
+                        <li><a href="./events/taal-tarang.html">Taal Tarang: The Classical Dance Confrontation 💃🕺</a></li>
+                        <li><a href="./events/clash-of-chords.html">Folk Feat Fiesta: Step Into Heritage 💃🕺</a></li>
+                    </ul>
+                </div>
+
+                <div class="event-card" data-category="fashion-creative-arts">
+                    <h3>Fashion & Creative Arts 👗</h3>
+                    <ul>
+                        <li><a href="./events/aether-vortex.html">Aether Vortex: The Runway Revolution 👗✨</a></li>
+                        <li><a href="./events/canvas-of-expressions.html">Canvas of Expressions – The Face Painting Challenge 🎨</a></li>
+                    </ul>
+                </div>
+
+                <div class="event-card" data-category="literary-oratory-arts">
+                    <h3>Literary & Oratory Arts 📚</h3>
+                    <ul>
+                        <li><a href="./events/spontanea.html">Spontanea: Speak Your Mind 🎙️</a></li>
+                        <li><a href="./events/clash-of-minds.html">Clash of Minds: The Ultimate Debate Battle ⚖️</a></li>
+                        <li><a href="./events/brainwave-arena.html">Brainwave Arena: The Knowledge Knockout ⚖️</a></li>
+                    </ul>
+                </div>
+
+                <div class="event-card" data-category="entrepreneurship-innovation">
+                    <h3>🚀 GamePlan: Pitch, Bid & Triumph </h3>
+                    <ul>
+                        <li><a href="./events/inno-thon.html">InnoThon: Pitch to Win 🚀</a></li>
+                        <li><a href="./events/bid-blasters.html">Bid Blasters: The IPL Auction Showdown 🏏💰</a></li>
+                    </ul>
+                </div>
+
+                <div class="event-card" data-category="visual-cinematic-arts">
+                    <h3>Visual & Cinematic Arts 🎥</h3>
+                    <ul>
+                        <li><a href="./events/frame-quest.html">Frame Quest: Capture the Moment 📷</a></li>
+                        <li><a href="./events/cine-sprint.html">CineSprint: The Short Movie Showdown 🎬</a></li>
+                    </ul>
+                </div>
+
+                <div class="event-card" data-category="general-rules">
+                    <h3>General Rules & Regulations 📜</h3>
+                    <ul>
+                        <li><a href="./events/general-rules.html">General Rules & Regulations 📜</a></li>
+                    </ul>
+                </div>
+            </div>
+
+            <button id="register-button" onclick="window.location.href='./register.html'" aria-label="Register for Events">Register Now</button>
+        </section>
+
+        <section id="past-events" class="animate-on-scroll">
+            <h2 class="glitch" data-text="Archives: Past Events">Archives: Past Events</h2>
+            <div class="past-events-gallery">
+                <div class="gallery-item">
+                    <img src="P1074060 (1).jpg" alt="Past Event Photo 1:Dance Face-Off" loading="lazy">
+                    <div class="gallery-overlay">
+                        <p>Dance Face-Off</p>
+                    </div>
+                </div>
+                <div class="gallery-item">
+                    <img src="P1086392.jpg" alt="Past Event Photo 2:Fashion Show" loading="lazy">
+                    <div class="gallery-overlay">
+                        <p>Fashion Show</p>
+                    </div>
+                </div>
+                <div class="gallery-item">
+                    <img src="P1097463.jpg" alt="Past Event Photo 3:Band Performance" loading="lazy">
+                    <div class="gallery-overlay">
+                        <p>Band Performance</p>
+                    </div>
+                </div>
+                <div class="gallery-item">
+                    <img src="IMG_4105.JPG" alt="Past Event Photo 4:Debate Finals" loading="lazy">
+                    <div class="gallery-overlay">
+                        <p>Debate Finals</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="contact-us" class="animate-on-scroll">
+            <h2 class="glitch" data-text="Contact the Crew">Contact the Crew</h2>
+            <div class="contact-container">
+                <div class="contact-form">
+                    <h3>Send a Transmission</h3>
+                    <form id="contact-form">
+                        <input type="text" name="name" placeholder="Your Name" required aria-label="Your Name">
+                        <input type="email" name="email" placeholder="Your Email" required aria-label="Your Email">
+                        <textarea name="message" placeholder="Your Message" required aria-label="Your Message"></textarea>
+                        <button type="submit" aria-label="Send Message">Send Message</button>
+                    </form>
+                </div>
+                <div class="contact-details">
+                    <h3>Contact Details</h3>
+                    <p><span class="contact-icon">📞</span> Mr. Jyotirmoy Banerjee, Faculty Coordinator - +91-8504951904</p>
+                    <p><span class="contact-icon">📞</span> Ms. Saloni Kumari, Student Coordinator - +91-9015509974</p>
+                    <p><span class="contact-icon">📞</span> Ms. Hoor Muneer, Student Coordinator - +91-9906605270</p>
+                    <p><span class="contact-icon">📧</span> Email: <a href="mailto:amigloria@blr.amity.edu">amigloria@blr.amity.edu</a></p>
+                    <p><span class="contact-icon">📍</span> Location: <a href="https://www.google.com/maps/dir//Road,+NH-207,+opposite+to+the+office+of+Deputy+Commissioner,+Devanahalli,+Doddaballapura,+Bengaluru,+Karnataka+562110/@13.2777741,77.5353974,12z/data=!4m8!4m7!1m0!1m5!1m1!1s0x3bb1e1788c464173:0xa7251e5bce3526e5!2m2!1d77.6177993!2d13.2777873?entry=ttu&g_ep=EgoyMDI1MDQwMi4xIKXMDSoASAFQAw%3D%3D" target="_blank" aria-label="Open Google Maps for College Location">Amity University Bengaluru</a></p>
+                    <div class="social-links">
+                        <h4>Follow Us</h4>
+                        <a href="https://facebook.com/amigloria" target="_blank" class="social-icon" aria-label="Follow on Facebook">📘</a>
+                        <a href="https://twitter.com/amigloria" target="_blank" class="social-icon" aria-label="Follow on Twitter">🐦</a>
+                        <a href="https://instagram.com/amigloria" target="_blank" class="social-icon" aria-label="Follow on Instagram">📸</a>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <footer>
+            <div class="footer-left">Designed by: <img src="logo.png" alt="AB"></div>
+            <div class="footer-right">Powered by: Amity University Bengaluru</div>
+        </footer>
+    </main>
+
+    <!-- Event Registration Modal -->
+    <div id="register-modal" class="modal">
+        <div class="modal-content">
+            <span id="close-modal" class="close" aria-label="Close Modal" tabindex="0">×</span>
+            <h2>Register for <span id="event-name">AMIGLORIA 2025</span></h2>
+            <form id="register-form">
+                <input type="text" name="group-name" id="group-name" placeholder="Group Name (For Group Events Only)" aria-label="Group Name">
+                <div id="participants">
+                    <div class="participant">
+                        <h3>Participant 1</h3>
+                        <input type="text" name="participant-name[]" placeholder="Name" required aria-label="Participant Name">
+                        <input type="text" name="college-name[]" placeholder="College Name" required aria-label="College Name">
+                        <input type="tel" name="contact-no[]" placeholder="Contact No" required aria-label="Contact No">
+                        <input type="email" name="email[]" placeholder="Email ID" required aria-label="Email ID">
+                    </div>
+                </div>
+                <button type="button" id="add-participant" aria-label="Add Participant">Add Participant +</button>
+                <p><strong>Registration Amount:</strong> Rs. <span id="registration-amount">0</span></p>
+                <button type="submit" id="pay-now" aria-label="Pay Now">Pay Now</button>
+            </form>
+        </div>
+    </div>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r134/three.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.5/gsap.min.js"></script>
+    <script src="script.js"></script>
+
+</body>
+</html>
