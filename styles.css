@@ -7,7 +7,92 @@
     --dark-bg: #0a0a0a;
     --text-color: #ffffff;
 }
+/* === Mobile Adjustments === */
+@media (max-width: 768px) {
+    /* Navigation */
+    .cockpit-nav {
+        flex-direction: column;
+        gap: 10px;
+        padding: 10px;
+    }
 
+    .nav-hud {
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 10px;
+    }
+
+    #amity-logo, #additional-logo {
+        position: static;
+        height: 60px;
+        margin: 5px auto;
+    }
+
+    /* Hero */
+    .hero h1 {
+        font-size: 3rem;
+    }
+
+    .hero p {
+        font-size: 1.2rem;
+    }
+
+    #hack-button {
+        font-size: 1rem;
+        padding: 10px 20px;
+    }
+
+    .countdown {
+        flex-wrap: wrap;
+        gap: 10px;
+        font-size: 1.2rem;
+    }
+
+    /* Cards */
+    .about-container, .event-grid {
+        flex-direction: column;
+        display: flex;
+    }
+
+    .holo-card, .event-card {
+        max-width: 100%;
+    }
+
+    /* Gallery */
+    .gallery-item {
+        width: 100%;
+        height: auto;
+    }
+}
+
+@media (max-width: 480px) {
+    /* Smaller devices */
+    header {
+        padding: 5px;
+    }
+
+    .nav-button {
+        font-size: 0.8rem;
+        padding: 5px;
+    }
+
+    .hero h1 {
+        font-size: 2.2rem;
+    }
+
+    .hero p {
+        font-size: 1rem;
+    }
+
+    .event-details {
+        padding: 60px 10px !important;
+    }
+
+    #pay-now, #add-participant {
+        width: 100%;
+        font-size: 1rem;
+    }
+}
 /* === Base Styles === */
 body {
     font-family: 'Exo 2', sans-serif;
