@@ -90,7 +90,7 @@ main{
   position: relative;
   z-index: 1;
   /* top space for fixed header (updated at larger widths below) */
-  padding-top: 64px;
+  padding-top: 32px; /* less space on mobile */
 }
 
 /* Sections */
@@ -229,8 +229,9 @@ header{
 #amigloria-logo{
   display:block;
   margin-inline:auto;
-  margin-top: var(--space-4);
-  width: min(90%, 420px);   /* fluid + capped */
+  margin-top: var(--space-2); /* less top margin for better visibility */
+  margin-bottom: var(--space-4);
+  width: min(96%, 340px);   /* slightly larger on mobile, capped */
   height: auto;
 }
 
@@ -546,6 +547,11 @@ footer{
     margin: 0 var(--space-4) 0 0;
   }
   #amity-logo,#additional-logo{ height: 42px; }
+  #amigloria-logo{
+    width: min(80%, 420px); /* larger on desktop */
+    margin-top: var(--space-4);
+    margin-bottom: var(--space-6);
+  }
   main{ padding-top: 88px; }
 
   .about-container{
