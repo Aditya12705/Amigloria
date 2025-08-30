@@ -14,59 +14,56 @@
   --light-blue: #37c3ff;
   --silver: #c0c0c0;
   --white: #ffffff;
-  header{
-    position: fixed; left: 0; right: 0; top: 0;
-    z-index: 1000;
-    width: 100vw;
-    background: rgba(10, 20, 40, 0.96);
-    backdrop-filter: blur(8px);
-    padding: 0 0.5rem;
-    min-height: 56px;
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    box-shadow: 0 2px 16px 0 rgba(55,195,255,0.10), 0 1.5px 0 0 var(--blue);
-    border-radius: 0;
-  }
-  --r-lg: 1rem;
-  @media (min-width: 640px){
-    header{
-      padding: 0 2rem;
-      min-height: 62px;
-    }
-    .header-logos{
-      gap: var(--space-4);
-      margin: 0;
-    }
-    #amity-logo,#additional-logo{ height: 42px; }
-    #amigloria-logo{
-      width: 120px;
-      margin: 0;
-      height: auto;
-    }
-    .cockpit-nav{
-      gap: 1.1rem;
-    }
-    .nav-button{
-      font-size: var(--fs-sm);
-      padding: 0.45rem 1.1rem;
-    }
-    #launch-button{
-      font-size: var(--fs-sm);
-      padding: 0.5rem 1.1rem;
-    }
-    main{ padding-top: 88px; }
+  --dark-bg: #0a0a0a;
+  --text: #ffffff;
 
-    .about-container{
-      grid-template-columns: repeat(2, minmax(0,1fr));
-    }
-    .event-grid{
-      grid-template-columns: repeat(2, minmax(0,1fr));
-    }
-    .past-events-gallery{
-      grid-template-columns: repeat(2, minmax(0,1fr));
-    }
-  }
+  /* Elevation */
+  --shadow-soft: 0 0 10px rgba(55,195,255,.35);
+  --shadow-strong: 0 0 25px rgba(55,195,255,.65);
+
+  /* Radii */
+  --r-xs: .375rem;
+  --r-sm: .5rem;
+  --r-md: .75rem;
+  --r-lg: 1rem;
+  --r-pill: 999px;
+
+  /* Spacing scale */
+  --space-1: .25rem;
+  --space-2: .5rem;
+  --space-3: .75rem;
+  --space-4: 1rem;
+  --space-5: 1.25rem;
+  --space-6: 1.5rem;
+  --space-8: 2rem;
+  --space-10: 2.5rem;
+  --space-12: 3rem;
+
+  /* Fluid typography */
+  --fs-xs: clamp(.75rem, .7rem + .2vw, .85rem);
+  --fs-sm: clamp(.875rem, .8rem + .25vw, 1rem);
+  --fs-md: clamp(1rem, .95rem + .3vw, 1.125rem);
+  --fs-lg: clamp(1.125rem, 1rem + .8vw, 1.5rem);
+  --fs-xl: clamp(1.5rem, 1.2rem + 2vw, 2.25rem);
+  --fs-2xl: clamp(2rem, 1.5rem + 4vw, 3.25rem);
+  --fs-3xl: clamp(2.5rem, 1.8rem + 6vw, 4.25rem);
+}
+
+html {
+  box-sizing: border-box;
+  -webkit-text-size-adjust: 100%;
+  scroll-behavior: smooth;
+}
+
+*,*::before,*::after{ box-sizing: inherit; }
+
+body{
+  margin:0;
+  font-family: 'Exo 2', system-ui, -apple-system, Segoe UI, Roboto, 'Helvetica Neue', Arial, 'Noto Sans', 'Liberation Sans', sans-serif;
+  color: var(--text);
+  background: var(--dark-bg);
+  line-height: 1.6;
+  overflow-x: hidden; /* prevent sideways scroll on mobile */
 }
 
 /* Make all images/videos responsive by default */
