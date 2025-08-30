@@ -1760,3 +1760,95 @@ footer .footer-right {
     text-shadow: 0 0 10px var(--white);
     text-align: center;
 }
+/* === Mobile Fixes === */
+@media (max-width: 768px) {
+    /* Header & Nav */
+    header {
+        padding: 8px;
+    }
+
+    .cockpit-nav {
+        flex-direction: column;
+        gap: 10px;
+        padding: 10px;
+    }
+
+    #amity-logo,
+    #additional-logo {
+        position: static;
+        height: 60px;
+        width: auto;
+        margin: 5px auto;
+        display: block;
+    }
+
+    /* Hero Section */
+    .hero {
+        padding: 40px 10px;
+    }
+
+    .hero h1 {
+        font-size: 2.5rem;
+        margin-bottom: 10px;
+    }
+
+    .hero p {
+        font-size: 1.2rem;
+        margin-bottom: 15px;
+    }
+
+    #hack-button {
+        font-size: 1rem;
+        padding: 10px 20px;
+        margin: 10px 0;
+    }
+
+    .countdown {
+        flex-wrap: wrap;
+        gap: 8px;
+        font-size: 1rem;
+        justify-content: center;
+    }
+
+    /* Sections */
+    section {
+        padding: 40px 15px;
+    }
+
+    /* Cards */
+    .holo-card,
+    .event-card {
+        max-width: 100%;
+        margin: 0 auto;
+    }
+
+    /* Gallery */
+    .gallery-item {
+        width: 100%;
+        height: auto;
+    }
+}
+
+@media (max-width: 480px) {
+    .hero h1 {
+        font-size: 2rem;
+    }
+
+    .hero p {
+        font-size: 1rem;
+    }
+
+    #hack-button {
+        width: 100%;
+    }
+
+    .event-details {
+        padding: 40px 15px !important;
+    }
+
+    #pay-now,
+    #add-participant {
+        width: 100%;
+        font-size: 1rem;
+    }
+}
