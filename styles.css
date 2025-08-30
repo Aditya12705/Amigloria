@@ -146,10 +146,13 @@ section{
 header{
   position: fixed; inset-inline:0; top:0;
   z-index: 1000;
-  background: rgba(0,0,0,.85);
-  backdrop-filter: blur(4px);
-  padding: var(--space-3) var(--space-4);
+  background: rgba(10, 20, 40, 0.92);
+  backdrop-filter: blur(8px);
+  padding: 0.25rem 0.5rem;
+  min-height: 54px;
   display:flex; align-items:center; justify-content:center;
+  box-shadow: 0 2px 16px 0 rgba(55,195,255,0.10), 0 1.5px 0 0 var(--blue);
+  border-radius: 0 0 1.5rem 1.5rem;
 }
 
 /* Logo row (Amity + additional) — mobile: stacked center */
@@ -166,14 +169,14 @@ header{
 
 /* cockpit-nav = rounded nav container */
 .cockpit-nav{
-  display:flex; align-items:center; justify-content:center; gap: var(--space-3);
-  padding: var(--space-3) var(--space-4);
-  background: rgba(0,0,0,.8);
-  border: 1px solid var(--light-blue);
+  display:flex; align-items:center; justify-content:center; gap: 0.5rem;
+  padding: 0.25rem 0.75rem;
+  background: rgba(10, 20, 40, 0.92);
+  border: 1.5px solid var(--blue);
   border-radius: var(--r-pill);
-  box-shadow: var(--shadow-soft);
+  box-shadow: 0 2px 16px 0 rgba(55,195,255,0.10);
   width: 100%;
-  max-width: 720px;
+  max-width: 600px;
   margin-inline: auto;
   flex-wrap: wrap;
 }
@@ -184,33 +187,38 @@ header{
   background: transparent;
   color: var(--white);
   border: none;
-  padding: .5rem .75rem;
-  font-size: var(--fs-sm);
-  font-weight: 800;
+  padding: 0.35rem 0.7rem;
+  font-size: var(--fs-xs);
+  font-weight: 700;
   text-transform: uppercase;
   cursor: pointer;
   position: relative;
-  border-radius: var(--r-xs);
-  text-shadow: 0 0 8px var(--light-blue);
-  transition: transform .2s ease, color .2s ease;
+  border-radius: var(--r-pill);
+  text-shadow: 0 0 6px var(--light-blue);
+  letter-spacing: 0.04em;
+  transition: background 0.18s, color 0.18s, box-shadow 0.18s, transform 0.18s;
+  box-shadow: 0 0 0 transparent;
 }
 .nav-button:hover,
 .nav-button:focus-visible{
-  transform: translateY(-2px);
+  background: rgba(55,195,255,0.10);
   color: var(--light-blue);
+  box-shadow: 0 0 8px var(--light-blue);
+  transform: translateY(-1.5px) scale(1.04);
 }
 
 #launch-button{
   background: linear-gradient(45deg, var(--blue), var(--light-blue));
   color: var(--white);
   border: none;
-  padding: .6rem 1rem;
-  font-size: var(--fs-sm);
+  padding: 0.45rem 0.9rem;
+  font-size: var(--fs-xs);
   font-weight: 800;
   cursor: pointer;
-  border-radius: var(--r-xs);
-  box-shadow: 0 0 15px var(--blue);
+  border-radius: var(--r-pill);
+  box-shadow: 0 0 10px var(--blue);
   font-family: 'Orbitron', sans-serif;
+  letter-spacing: 0.04em;
 }
 
 /* Particle burst container */
@@ -541,7 +549,8 @@ footer{
 @media (min-width: 640px){
   /* Header: logos and nav on one line */
   header{
-    padding: var(--space-3) var(--space-6);
+    padding: 0.5rem 2rem;
+    min-height: 62px;
   }
   .header-logos{
     margin: 0 var(--space-4) 0 0;
@@ -551,6 +560,19 @@ footer{
     width: min(80%, 420px); /* larger on desktop */
     margin-top: var(--space-4);
     margin-bottom: var(--space-6);
+  }
+  .cockpit-nav{
+    max-width: 700px;
+    padding: 0.4rem 1.5rem;
+    gap: 1.1rem;
+  }
+  .nav-button{
+    font-size: var(--fs-sm);
+    padding: 0.45rem 1.1rem;
+  }
+  #launch-button{
+    font-size: var(--fs-sm);
+    padding: 0.5rem 1.1rem;
   }
   main{ padding-top: 88px; }
 
