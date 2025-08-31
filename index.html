@@ -20,28 +20,19 @@
 
     <!-- Header -->
     <header>
-        <button class="hamburger" aria-label="Open navigation" onclick="document.querySelector('.mobile-nav').classList.toggle('open')">
+        <button class="hamburger" aria-label="Open navigation" onclick="document.getElementById('main-nav').classList.toggle('open')">
           <span></span>
           <span></span>
           <span></span>
         </button>
-        <nav class="navbar-center">
+        <nav id="main-nav" class="main-nav">
             <button id="launch-button" aria-label="Launch AMIGLORIA 2025 Experience">AMIGLORIA 2025</button>
-            <div class="nav-hud">
-                <button class="nav-button" data-section="#home">Home</button>
-                <button class="nav-button" data-section="#about">About</button>
-                <button class="nav-button" data-section="#events">Events</button>
-                <button class="nav-button" data-section="#contact-us">Contact Us</button>
-                <button class="nav-button" onclick="window.location.href='./register.html'">Register</button>
-            </div>
-        </nav>
-        <div class="mobile-nav">
-            <button class="nav-button" data-section="#home" onclick="document.querySelector('.mobile-nav').classList.remove('open')">Home</button>
-            <button class="nav-button" data-section="#about" onclick="document.querySelector('.mobile-nav').classList.remove('open')">About</button>
-            <button class="nav-button" data-section="#events" onclick="document.querySelector('.mobile-nav').classList.remove('open')">Events</button>
-            <button class="nav-button" data-section="#contact-us" onclick="document.querySelector('.mobile-nav').classList.remove('open')">Contact Us</button>
+            <button class="nav-button" data-section="#home">Home</button>
+            <button class="nav-button" data-section="#about">About</button>
+            <button class="nav-button" data-section="#events">Events</button>
+            <button class="nav-button" data-section="#contact-us">Contact Us</button>
             <button class="nav-button" onclick="window.location.href='./register.html'">Register</button>
-        </div>
+        </nav>
     </header>
 
     <main>
