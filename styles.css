@@ -215,7 +215,6 @@ header {
 }
 
 #amity-logo, #additional-logo {
-  /* Remove the global height increase here! */
   height: 36px;
   width: auto;
   display: block;
@@ -698,5 +697,4 @@ footer{
 #cursor-trail, .cursor-particle{ display:none !important; }
 body::before{ content:none !important; }
 
-/* End of file */
 /* End of file */
