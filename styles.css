@@ -1,13 +1,16 @@
 .amigloria-logo-center {
   display: flex;
-  flex-direction: column; /* stack logo and text vertically */
+  flex-direction: row; /* side by side */
   justify-content: center;
   align-items: center;
   margin: 0 auto 1.5rem auto;
   padding-top: 1.5rem;
   box-sizing: border-box;
   width: 100%;
-  text-align: center; /* center text under logo */
+  text-align: left; /* or center if you want text centered under itself */
+}
+.amigloria-logo-center > * {
+  margin: 0 1.5rem; /* add spacing between logo and text */
 }
 
 /* Ensure the logo itself is not too large and always centered */
