@@ -2,8 +2,20 @@
   display: flex;
   justify-content: center;
   align-items: center;
-  width: 100%;
+  width: 100vw;
+  max-width: 100vw;
+  margin: 0 auto 1.5rem auto;
+  padding-top: 1.5rem;
+  box-sizing: border-box;
+}
+
+/* Ensure the logo itself is not too large and always centered */
+.amigloria-logo-center #amigloria-logo {
+  display: block;
   margin: 0 auto;
+  max-width: 420px;
+  width: 100%;
+  height: auto;
 }
 /* =========================================================
    AMIGLORIA 2025 — Mobile-first Responsive Stylesheet
