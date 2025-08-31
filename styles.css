@@ -225,8 +225,12 @@ header {
 
 /* Only increase the right logo size */
 .header-logos.right #additional-logo {
-  height: 120px !important;
-  width: auto;
+  height: auto !important;
+  max-height: none !important;
+  width: 120px !important;   /* Set a fixed width for visibility */
+  min-width: 80px !important;
+  /* Optionally, add: */
+  object-fit: contain;
 }
 
 @media (min-width: 640px) {
