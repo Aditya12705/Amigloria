@@ -215,7 +215,7 @@ header {
 }
 
 #amity-logo, #additional-logo {
-  height: 76px !important; /* increased from 36px/44px */
+  height: 56px !important; /* increased from 36px/44px */
   width: auto;
   display: block;
   background: none;
@@ -223,7 +223,7 @@ header {
 
 @media (min-width: 640px) {
   #amity-logo, #additional-logo {
-    height: 92px !important; /* even larger on desktop */
+    height: 72px !important; /* even larger on desktop */
   }
 }
 
