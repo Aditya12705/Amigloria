@@ -20,9 +20,11 @@
 
     <!-- Header -->
     <header>
-        <div class="header-logos left">
-            <img src="amity-removebg-preview(1).png" alt="Amity University Bengaluru Logo" id="amity-logo">
-        </div>
+        <button class="hamburger" aria-label="Open navigation" onclick="document.querySelector('.mobile-nav').classList.toggle('open')">
+          <span></span>
+          <span></span>
+          <span></span>
+        </button>
         <nav class="navbar-center">
             <button id="launch-button" aria-label="Launch AMIGLORIA 2025 Experience">AMIGLORIA 2025</button>
             <div class="nav-hud">
@@ -33,8 +35,12 @@
                 <button class="nav-button" onclick="window.location.href='./register.html'">Register</button>
             </div>
         </nav>
-        <div class="header-logos right">
-            <img src="3 (1).png" alt="New Logo" id="additional-logo">
+        <div class="mobile-nav">
+            <button class="nav-button" data-section="#home" onclick="document.querySelector('.mobile-nav').classList.remove('open')">Home</button>
+            <button class="nav-button" data-section="#about" onclick="document.querySelector('.mobile-nav').classList.remove('open')">About</button>
+            <button class="nav-button" data-section="#events" onclick="document.querySelector('.mobile-nav').classList.remove('open')">Events</button>
+            <button class="nav-button" data-section="#contact-us" onclick="document.querySelector('.mobile-nav').classList.remove('open')">Contact Us</button>
+            <button class="nav-button" onclick="window.location.href='./register.html'">Register</button>
         </div>
     </header>
 
