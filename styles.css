@@ -225,7 +225,7 @@ header {
 
 /* Only increase the right logo size */
 .header-logos.right #additional-logo {
-  height: 80px !important;
+  height: 120px !important;
   width: auto;
 }
 
