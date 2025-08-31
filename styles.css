@@ -17,9 +17,11 @@
 .amigloria-logo-center #amigloria-logo {
   display: block;
   margin: 0 auto;
-  max-width: 420px;
+  max-width: 520px; /* increased from 420px */
   width: 100%;
   height: auto;
+  min-width: 180px; /* ensure it's larger on all screens */
+  min-height: 180px;
 }
 /* =========================================================
    AMIGLORIA 2025 — Mobile-first Responsive Stylesheet
@@ -213,7 +215,7 @@ header {
 }
 
 #amity-logo, #additional-logo {
-  height: 36px;
+  height: 56px !important; /* increased from 36px/44px */
   width: auto;
   display: block;
   background: none;
@@ -221,7 +223,7 @@ header {
 
 @media (min-width: 640px) {
   #amity-logo, #additional-logo {
-    height: 44px;
+    height: 72px !important; /* even larger on desktop */
   }
 }
 
@@ -621,7 +623,7 @@ footer{
   }
   #amity-logo,#additional-logo{ height: 42px; }
   #amigloria-logo{
-    width: min(80%, 420px); /* larger on desktop */
+    width: min(80%, 520px); /* larger on desktop */
     margin-top: var(--space-4);
     margin-bottom: var(--space-6);
   }
