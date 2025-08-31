@@ -201,47 +201,6 @@ header {
   }
 }
 
-.header-logos {
-  display: flex;
-  align-items: center; /* ensures logos are vertically centered in navbar */
-  gap: var(--space-3);
-  margin: 0;
-}
-
-.header-logos.left {
-  justify-content: flex-start;
-}
-.header-logos.right {
-  justify-content: flex-end;
-}
-
-#amity-logo, #additional-logo {
-  max-height: 48px; /* increased size, but does not force navbar to grow */
-  width: auto;
-  display: block;
-  background: none;
-  /* Remove any fixed height here */
-}
-
-/* Only increase the right logo size */
-.header-logos.right #additional-logo {
-  height: auto !important;
-  max-height: none !important;
-  width: 120px !important;   /* Set a fixed width for visibility */
-  min-width: 80px !important;
-  /* Optionally, add: */
-  object-fit: contain;
-}
-
-@media (min-width: 640px) {
-  #amity-logo, #additional-logo {
-    max-height: 64px; /* larger on desktop, but still constrained */
-  }
-  .header-logos.right #additional-logo {
-    height: 110px !important;
-  }
-}
-
 .cockpit-nav {
   display: flex;
   align-items: center;
@@ -667,6 +626,46 @@ footer{
     grid-template-columns: repeat(2, minmax(0,1fr));
   }
 }
+
+@media (min-width: 960px){
+  #amigloria-logo{ width: min(80%, 560px); }
+
+  .cockpit-nav{
+    gap: var(--space-4);
+    padding: var(--space-4) var(--space-6);
+  }
+  .nav-button{ font-size: var(--fs-md); padding: .6rem .9rem; }
+  #launch-button{ font-size: var(--fs-md); padding: .7rem 1rem; }
+
+  .hero{ min-height: 88vh; gap: var(--space-6); }
+  .hero h1{ font-size: var(--fs-3xl); }
+  .hero p{ font-size: var(--fs-lg); }
+
+  .about-container{
+    grid-template-columns: repeat(3, minmax(0,1fr));
+  }
+  .event-grid{
+    grid-template-columns: repeat(3, minmax(0,1fr));
+  }
+  .past-events-gallery{
+    grid-template-columns: repeat(3, minmax(0,1fr));
+  }
+}
+
+/* =========================================================
+   OPTIONAL LEGACY SELECTORS (kept for compatibility)
+   These ensure older markup (e.g., .space-logo) scales well.
+   ========================================================= */
+.space-logo{ width:min(90%, 420px); height:auto; margin-inline:auto; display:block; }
+
+/* Remove any custom cursor particles if present */
+#cursor-trail, .cursor-particle{ display:none !important; }
+body::before{ content:none !important; }
+
+/* End of file */
+/* End of file */
+/* End of file */
+
 
 @media (min-width: 960px){
   #amigloria-logo{ width: min(80%, 560px); }
