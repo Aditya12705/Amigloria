@@ -215,18 +215,25 @@ header {
 }
 
 #amity-logo, #additional-logo {
-  height: 56px !important; /* increased from 36px/44px */
+  /* Remove the global height increase here! */
+  height: 36px;
   width: auto;
   display: block;
   background: none;
 }
 
+/* Only increase the right logo size */
+.header-logos.right #additional-logo {
+  height: 80px !important;
+  width: auto;
+}
+
 @media (min-width: 640px) {
   #amity-logo, #additional-logo {
-    height: 72px !important; /* even larger on desktop */
+    height: 44px;
   }
   .header-logos.right #additional-logo {
-    height: 110px !important; /* even larger on desktop */
+    height: 110px !important;
   }
 }
 
