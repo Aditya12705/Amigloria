@@ -150,9 +150,9 @@ header {
   padding: 0 0.5rem;
   min-height: 56px;
   display: flex;
-  flex-direction: column;
+  flex-direction: row;
   align-items: center;
-  justify-content: center;
+  justify-content: space-between;
   box-shadow: 0 2px 16px 0 rgba(55,195,255,0.10), 0 1.5px 0 0 var(--blue);
   border-radius: 0;
 }
@@ -161,10 +161,10 @@ header {
   width: 100%;
   max-width: 1200px;
   display: flex;
-  flex-direction: column;
+  flex-direction: row;
   align-items: center;
   justify-content: center;
-  gap: var(--space-3);
+  gap: var(--space-8);
 }
 
 @media (min-width: 640px) {
@@ -178,9 +178,15 @@ header {
 
 .header-logos {
   display: flex;
-  align-items: row;
+  align-items: center;
   gap: var(--space-3);
   margin: 0;
+.header-logos.left {
+  justify-content: flex-start;
+}
+.header-logos.right {
+  justify-content: flex-end;
+}
 }
 
 #amity-logo, #additional-logo {
@@ -584,8 +590,11 @@ footer{
     padding: 0.5rem 2rem;
     min-height: 62px;
   }
-  .header-logos{
-    margin: 0 var(--space-4) 0 0;
+  .header-logos.left{
+    margin-right: var(--space-4);
+  }
+  .header-logos.right{
+    margin-left: var(--space-4);
   }
   #amity-logo,#additional-logo{ height: 42px; }
   #amigloria-logo{
