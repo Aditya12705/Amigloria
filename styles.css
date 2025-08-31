@@ -225,6 +225,9 @@ header {
   #amity-logo, #additional-logo {
     height: 72px !important; /* even larger on desktop */
   }
+  .header-logos.right #additional-logo {
+    height: 110px !important; /* even larger on desktop */
+  }
 }
 
 .cockpit-nav {
