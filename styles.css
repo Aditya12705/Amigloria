@@ -203,22 +203,24 @@ header {
 
 .header-logos {
   display: flex;
-  align-items: center;
+  align-items: center; /* ensures logos are vertically centered in navbar */
   gap: var(--space-3);
   margin: 0;
+}
+
 .header-logos.left {
   justify-content: flex-start;
 }
 .header-logos.right {
   justify-content: flex-end;
 }
-}
 
 #amity-logo, #additional-logo {
-  height: 36px;
+  max-height: 48px; /* increased size, but does not force navbar to grow */
   width: auto;
   display: block;
   background: none;
+  /* Remove any fixed height here */
 }
 
 /* Only increase the right logo size */
@@ -229,7 +231,7 @@ header {
 
 @media (min-width: 640px) {
   #amity-logo, #additional-logo {
-    height: 44px;
+    max-height: 64px; /* larger on desktop, but still constrained */
   }
   .header-logos.right #additional-logo {
     height: 110px !important;
@@ -697,4 +699,6 @@ footer{
 #cursor-trail, .cursor-particle{ display:none !important; }
 body::before{ content:none !important; }
 
+/* End of file */
+/* End of file */
 /* End of file */
