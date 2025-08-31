@@ -178,7 +178,7 @@ header {
 
 .header-logos {
   display: flex;
-  align-items: center;
+  align-items: row;
   gap: var(--space-3);
   margin: 0;
 }
