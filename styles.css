@@ -620,6 +620,7 @@ footer{
 
   .about-container{
     grid-template-columns: repeat(2, minmax(0,1fr));
+    justify-items: center; /* center cards horizontally */
   }
   .event-grid{
     grid-template-columns: repeat(2, minmax(0,1fr));
@@ -645,6 +646,7 @@ footer{
 
   .about-container{
     grid-template-columns: repeat(3, minmax(0,1fr));
+    justify-items: center; /* center cards horizontally */
   }
   .event-grid{
     grid-template-columns: repeat(3, minmax(0,1fr));
@@ -652,6 +654,11 @@ footer{
   .past-events-gallery{
     grid-template-columns: repeat(3, minmax(0,1fr));
   }
+}
+
+/* Limit card width for better appearance on large screens */
+.holo-card {
+  max-width: 420px;
 }
 
 /* =========================================================
@@ -685,6 +692,7 @@ body::before{ content:none !important; }
 
   .about-container{
     grid-template-columns: repeat(3, minmax(0,1fr));
+    justify-items: center; /* center cards horizontally */
   }
   .event-grid{
     grid-template-columns: repeat(3, minmax(0,1fr));
