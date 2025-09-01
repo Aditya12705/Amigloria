@@ -370,8 +370,10 @@ h2.glitch::after{
 
 /* ---------- 8) About cards ---------- */
 .about-container{
-  display:grid; gap: var(--space-4);
+  display: grid;
+  gap: var(--space-4);
   grid-template-columns: 1fr;
+  justify-content: center; /* always center cards horizontally */
 }
 .holo-card{
   background: rgba(0,0,0,.8);
@@ -379,6 +381,8 @@ h2.glitch::after{
   border-radius: var(--r-md);
   box-shadow: var(--shadow-soft);
   transition: transform .2s ease, box-shadow .2s ease;
+  max-width: 420px;
+  width: 100%;
 }
 .holo-card:hover{ transform: translateY(-4px); box-shadow: var(--shadow-strong); }
 .holo-card h3{
@@ -619,8 +623,8 @@ footer{
   main{ padding-top: 88px; }
 
   .about-container{
-    grid-template-columns: repeat(2, minmax(0,1fr));
-    justify-items: center; /* center cards horizontally */
+    grid-template-columns: repeat(auto-fit, minmax(340px, 1fr));
+    justify-content: center; /* center the grid as a whole */
   }
   .event-grid{
     grid-template-columns: repeat(2, minmax(0,1fr));
@@ -645,8 +649,8 @@ footer{
   .hero p{ font-size: var(--fs-lg); }
 
   .about-container{
-    grid-template-columns: repeat(3, minmax(0,1fr));
-    justify-items: center; /* center cards horizontally */
+    grid-template-columns: repeat(auto-fit, minmax(340px, 1fr));
+    justify-content: center; /* center the grid as a whole */
   }
   .event-grid{
     grid-template-columns: repeat(3, minmax(0,1fr));
@@ -691,8 +695,8 @@ body::before{ content:none !important; }
   .hero p{ font-size: var(--fs-lg); }
 
   .about-container{
-    grid-template-columns: repeat(3, minmax(0,1fr));
-    justify-items: center; /* center cards horizontally */
+    grid-template-columns: repeat(auto-fit, minmax(340px, 1fr));
+    justify-content: center; /* center the grid as a whole */
   }
   .event-grid{
     grid-template-columns: repeat(3, minmax(0,1fr));
