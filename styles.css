@@ -581,40 +581,138 @@ h2.glitch::after{
 }
 
 /* ---------- 15) Footer ---------- */
+
 footer {
   display: flex;
-  flex-direction: column;
+  flex-direction: row;
   align-items: center;
-  justify-content: center;
-  gap: 0.5rem;
-  padding: var(--space-8) var(--space-4);
-  color: var(--silver);
+  justify-content: space-between;
+  padding: 2.5rem 3rem 1.5rem 3rem;
+  color: var(--white);
   background: rgba(10, 20, 40, 0.98);
-  border-top: 1.5px solid var(--blue);
-  font-size: var(--fs-sm);
-  box-shadow: 0 -2px 16px 0 rgba(55,195,255,0.10);
+  border-top: 2.5px solid var(--blue);
+  font-size: var(--fs-lg);
+  box-shadow: 0 -2px 32px 0 rgba(55,195,255,0.18);
   width: 100vw;
-  margin-left: calc(-1 * (100vw - 100%)/2); /* full bleed */
+  margin-left: calc(-1 * (100vw - 100%)/2);
+  font-family: 'Orbitron', 'Exo 2', sans-serif;
+  font-weight: 700;
+  letter-spacing: 0.04em;
 }
-
 footer .footer-left, footer .footer-right {
-  font-weight: 600;
-  letter-spacing: 0.03em;
-  text-shadow: 0 0 8px rgba(55,195,255,0.12);
+  font-weight: 700;
+  text-shadow: 0 0 12px var(--blue), 0 0 2px var(--white);
+  color: var(--white);
+  font-size: 1.25em;
 }
-
-@media (min-width: 640px) {
+@media (max-width: 900px) {
   footer {
-    flex-direction: row;
-    justify-content: space-between;
-    align-items: center;
+    flex-direction: column;
+    gap: 0.5rem;
     font-size: var(--fs-md);
-    gap: 0;
-    padding: var(--space-8) var(--space-12);
+    padding: 2rem 1rem 1rem 1rem;
   }
   footer .footer-left, footer .footer-right {
-    margin: 0;
+    font-size: 1em;
   }
+}
+
+/* Contact Crew Section (Contact the Crew) */
+.contact-container {
+  display: flex;
+  flex-direction: row;
+  gap: 2.5rem;
+  justify-content: center;
+  align-items: stretch;
+  background: none;
+  margin: 0 auto;
+  padding: 0;
+}
+.contact-form, .contact-details {
+  flex: 1 1 0;
+  background: rgba(10, 20, 40, 0.85);
+  border-radius: 1.25rem;
+  border: 2.5px solid var(--blue);
+  box-shadow: 0 0 32px 0 rgba(55,195,255,0.25), 0 0 0 2px rgba(55,195,255,0.10) inset;
+  padding: 2.5rem 2rem 2rem 2rem;
+  margin: 0 0.5rem;
+  color: var(--white);
+  font-family: 'Orbitron', 'Exo 2', sans-serif;
+  font-size: var(--fs-lg);
+  text-shadow: 0 0 8px var(--blue), 0 0 2px var(--white);
+  position: relative;
+  min-width: 320px;
+  max-width: 520px;
+}
+.contact-form h3, .contact-details h3 {
+  font-size: 2rem;
+  margin-bottom: 1.5rem;
+  color: var(--white);
+  text-shadow: 0 0 12px var(--blue), 0 0 2px var(--white);
+}
+.contact-details h4 {
+  margin-top: 2rem;
+  color: var(--white);
+  text-shadow: 0 0 8px var(--blue), 0 0 2px var(--white);
+}
+.contact-details p, .contact-details a {
+  color: var(--white);
+  font-size: 1.1em;
+  text-shadow: 0 0 6px var(--blue), 0 0 2px var(--white);
+}
+.contact-details .contact-icon {
+  font-size: 1.2em;
+  margin-right: 0.5em;
+  color: #ff4fa3;
+  filter: drop-shadow(0 0 4px #ff4fa3);
+}
+.contact-details .social-links a {
+  font-size: 2em;
+  margin-right: 0.7em;
+  color: var(--white);
+  filter: drop-shadow(0 0 6px var(--blue));
+  transition: color 0.2s, filter 0.2s;
+}
+.contact-details .social-links a:hover {
+  color: var(--blue);
+  filter: drop-shadow(0 0 12px var(--blue));
+}
+@media (max-width: 900px) {
+  .contact-container {
+    flex-direction: column;
+    gap: 1.5rem;
+    align-items: stretch;
+  }
+  .contact-form, .contact-details {
+    min-width: 0;
+    max-width: 100%;
+    margin: 0;
+    padding: 1.5rem 1rem 1rem 1rem;
+    font-size: var(--fs-md);
+  }
+}
+
+/* All Cards (holo-card, event-card, etc.) */
+.holo-card, .event-card, .modal-content, .participant, #favorites li {
+  background: rgba(10, 20, 40, 0.85);
+  border-radius: 1.25rem;
+  border: 2.5px solid var(--blue);
+  box-shadow: 0 0 32px 0 rgba(55,195,255,0.25), 0 0 0 2px rgba(55,195,255,0.10) inset;
+  color: var(--white);
+  font-family: 'Orbitron', 'Exo 2', sans-serif;
+  text-shadow: 0 0 8px var(--blue), 0 0 2px var(--white);
+}
+.holo-card h3, .event-card h3 {
+  color: var(--white);
+  text-shadow: 0 0 12px var(--blue), 0 0 2px var(--white);
+}
+.holo-card p, .event-card p, .event-card a, .holo-card ul, .event-card ul {
+  color: var(--white);
+  text-shadow: 0 0 6px var(--blue), 0 0 2px var(--white);
+}
+.event-card a:hover {
+  color: var(--blue);
+  text-shadow: 0 0 12px var(--blue);
 }
 
 /* ---------- 16) Utilities ---------- */
