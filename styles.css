@@ -177,18 +177,20 @@ header {
   display: flex;
   flex-direction: row;
   align-items: center;
-  justify-content: space-between;
+  justify-content: flex-start; /* logo left, nav next */
   box-shadow: 0 2px 16px 0 rgba(55,195,255,0.10), 0 1.5px 0 0 var(--blue);
   border-radius: 0;
 }
 
 .navbar-center {
-  width: 100%;
-  max-width: 1200px;
-  display: flex;
-  flex-direction: row;
-  align-items: center;
+  margin: 0 auto;
   justify-content: center;
+  align-items: center;
+  flex: 1 1 0%;
+  /* Remove width/max-width so it can center */
+  width: auto;
+  max-width: none;
+  display: flex;
   gap: var(--space-8);
 }
 
@@ -770,10 +772,11 @@ body::before{ content:none !important; }
     position: static;
     flex-direction: row;
     align-items: center;
-    justify-content: center;
+    justify-content: center; /* center nav items horizontally */
     background: none;
     padding: 0;
     gap: var(--space-8);
+    width: 100%; /* ensure nav takes full width for centering */
   }
   .main-nav .nav-button {
     font-size: var(--fs-xs);
