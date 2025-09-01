@@ -373,7 +373,10 @@ h2.glitch::after{
   display: grid;
   gap: var(--space-4);
   grid-template-columns: 1fr;
-  justify-content: center; /* always center cards horizontally */
+  justify-content: center;
+  max-width: 900px; /* add this for 2 cards, adjust as needed */
+  margin-left: auto;
+  margin-right: auto;
 }
 .holo-card{
   background: rgba(0,0,0,.8);
@@ -381,8 +384,8 @@ h2.glitch::after{
   border-radius: var(--r-md);
   box-shadow: var(--shadow-soft);
   transition: transform .2s ease, box-shadow .2s ease;
-  max-width: 420px;
-  width: 100%;
+  width: 100%; /* remove max-width for perfect alignment */
+  /* max-width: 420px; -- remove or comment out this line */
 }
 .holo-card:hover{ transform: translateY(-4px); box-shadow: var(--shadow-strong); }
 .holo-card h3{
@@ -623,8 +626,8 @@ footer{
   main{ padding-top: 88px; }
 
   .about-container{
-    grid-template-columns: repeat(auto-fit, minmax(340px, 1fr));
-    justify-content: center; /* center the grid as a whole */
+    grid-template-columns: repeat(2, 1fr); /* always 2 columns for about section */
+    max-width: 900px; /* ensures equal space on both sides */
   }
   .event-grid{
     grid-template-columns: repeat(2, minmax(0,1fr));
@@ -649,8 +652,8 @@ footer{
   .hero p{ font-size: var(--fs-lg); }
 
   .about-container{
-    grid-template-columns: repeat(auto-fit, minmax(340px, 1fr));
-    justify-content: center; /* center the grid as a whole */
+    grid-template-columns: repeat(2, 1fr); /* keep 2 columns for about section */
+    max-width: 900px;
   }
   .event-grid{
     grid-template-columns: repeat(3, minmax(0,1fr));
